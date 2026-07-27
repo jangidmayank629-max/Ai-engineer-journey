@@ -116,21 +116,110 @@ print("Total percentage you will get: =", percentage,"%")
 
 
 
-# Operators & Conditional Statements
+#---------+
 
-# Basic (1–10)
-num = int(input("enter your number "))
-
-if num > 0:
-    print("positive ")
-elif num < 0:
-    print("negative")
+# 1. Even / Odd
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
 else:
-    print("zero")
+    print("Odd")
 
-# Check even odd
-num1 = int(input("enter your number"))
-if num1 % 2 == 0:
-    print("even")
-else :
-    print("odd")
+
+# 2. Positive / Negative / Zero
+num = int(input("\nEnter a number: "))
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+# 3. Largest of 2 Numbers
+a = int(input("\nEnter first number: "))
+b = int(input("Enter second number: "))
+if a > b:
+    print("Largest =", a)
+else:
+    print("Largest =", b)
+
+
+# 4. Largest of 3 Numbers
+a = int(input("\nEnter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a >= b and a >= c:
+    print("Largest =", a)
+elif b >= a and b >= c:
+    print("Largest =", b)
+else:
+    print("Largest =", c)
+
+
+# 5. Leap Year
+year = int(input("\nEnter year: "))
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+
+
+# 6. Voting Eligibility
+age = int(input("\nEnter your age: "))
+if age >= 18:
+    print("Eligible to Vote")
+else:
+    print("Not Eligible to Vote")
+
+
+# 7. Pass / Fail
+marks = float(input("\nEnter marks: "))
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+
+
+# 8. Grade Calculator
+marks = float(input("\nEnter marks: "))
+if marks >= 90:
+    print("Grade A")
+elif marks >= 80:
+    print("Grade B")
+elif marks >= 70:
+    print("Grade C")
+elif marks >= 60:
+    print("Grade D")
+elif marks >= 40:
+    print("Grade E")
+else:
+    print("Fail")
+
+
+# 9. Divisible by 5 and 11
+num = int(input("\nEnter a number: "))
+if num % 5 == 0 and num % 11 == 0:
+    print("Divisible by both 5 and 11")
+else:
+    print("Not divisible by both 5 and 11")
+
+
+# 10. Simple Calculator
+num1 = float(input("\nEnter first number: "))
+op = input("Enter operator (+, -, *, /): ")
+num2 = float(input("Enter second number: "))
+
+if op == "+":
+    print("Result =", num1 + num2)
+elif op == "-":
+    print("Result =", num1 - num2)
+elif op == "*":
+    print("Result =", num1 * num2)
+elif op == "/":
+    if num2 != 0:
+        print("Result =", num1 / num2)
+    else:
+        print("Division by zero is not allowed")
+else:
+    print("Invalid Operator")
