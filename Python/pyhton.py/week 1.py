@@ -226,3 +226,150 @@ elif op == "/":
 else:
     print("Invalid Operator")
 
+# ===========================================
+# DAY 3 - PYTHON LOOPS PRACTICE (SOLUTIONS)
+# ===========================================
+
+# Q1. Print numbers from 1 to 100
+print("\nQ1")
+for i in range(1, 101):
+    print(i)
+
+# Q2. Print numbers from 100 to 1
+print("\nQ2")
+for i in range(100, 0, -1):
+    print(i)
+
+# Q3. Print all even numbers from 1 to 100
+print("\nQ3")
+for i in range(2, 101, 2):
+    print(i)
+
+# Q4. Print all odd numbers from 1 to 100
+print("\nQ4")
+for i in range(1, 101, 2):
+    print(i)
+
+# Q5. Find the sum of first N natural numbers
+print("\nQ5")
+n = int(input("Enter N: "))
+total = 0
+for i in range(1, n + 1):
+    total += i
+print("Sum =", total)
+
+# Q6. Print the multiplication table of a number
+print("\nQ6")
+num = int(input("Enter number: "))
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+
+# Q7. Find the factorial of a number
+print("\nQ7")
+num = int(input("Enter number: "))
+fact = 1
+for i in range(1, num + 1):
+    fact *= i
+print("Factorial =", fact)
+
+# Q8. Print Fibonacci series up to N terms
+print("\nQ8")
+n = int(input("Enter number of terms: "))
+a, b = 0, 1
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+print()
+
+# Q9. Find the sum of digits of a number
+print("\nQ9")
+num = int(input("Enter number: "))
+total = 0
+while num > 0:
+    total += num % 10
+    num //= 10
+print("Sum of digits =", total)
+
+# Q10. Reverse a number
+print("\nQ10")
+num = int(input("Enter number: "))
+reverse = 0
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num //= 10
+print("Reverse =", reverse)
+
+# Q11. Count the number of digits in a number
+print("\nQ11")
+num = int(input("Enter number: "))
+count = 0
+while num > 0:
+    count += 1
+    num //= 10
+print("Digits =", count)
+
+# Q12. Check whether a number is Prime or Not
+print("\nQ12")
+num = int(input("Enter number: "))
+is_prime = True
+
+if num <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+
+if is_prime:
+    print("Prime Number")
+else:
+    print("Not a Prime Number")
+
+# Q13. Check whether a number is Palindrome or Not
+print("\nQ13")
+num = int(input("Enter number: "))
+original = num
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num //= 10
+
+if original == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# Q14. Check whether a number is Armstrong or Not
+print("\nQ14")
+num = int(input("Enter number: "))
+original = num
+digits = len(str(num))
+total = 0
+
+while num > 0:
+    digit = num % 10
+    total += digit ** digits
+    num //= 10
+
+if total == original:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")
+
+# Q15. Find the largest digit in a number
+print("\nQ15")
+num = int(input("Enter number: "))
+largest = 0
+
+while num > 0:
+    digit = num % 10
+    if digit > largest:
+        largest = digit
+    num //= 10
+
+print("Largest digit =", largest)
+
