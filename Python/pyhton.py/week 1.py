@@ -226,18 +226,3 @@ elif op == "/":
 else:
     print("Invalid Operator")
 
-# 1. Print 1 to 100
-for i in range(1, 101):
-    print(i)
-
-# 2. Print 100 to 1
-for i in range(100, 0, -1):
-    print(i)
-
-# 3. Print Even Numbers (1–100)
-for i in range(2, 101, 2):
-    print(i)
-
-# 4. Print Odd Numbers (1–100)
-for i in range(1, 101, 2):
-    print(i)
