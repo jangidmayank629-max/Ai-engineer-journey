@@ -226,9 +226,8 @@ elif op == "/":
 else:
     print("Invalid Operator")
 
-# ===========================================
-# DAY 3 - PYTHON LOOPS PRACTICE (SOLUTIONS)
-# ===========================================
+
+
 
 # Q1. Print numbers from 1 to 100
 
