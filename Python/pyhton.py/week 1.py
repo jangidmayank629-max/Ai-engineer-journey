@@ -19,6 +19,260 @@ print("Subtrct:", Num2 - Num1)
 
 
 
+
+# Q1. Take user's name and age and print introduction
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+print("My name is", name, "and my age is", age)
+
+
+
+# Q2. Take two numbers and perform all operations
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("Addition:", a+b)
+print("Subtraction:", a-b)
+print("Multiplication:", a*b)
+print("Division:", a/b)
+
+
+
+# Q3. Check whether number is positive, negative or zero
+num = int(input("Enter number: "))
+
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+
+# Q4. Find largest among three numbers
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+c = int(input("Enter c: "))
+
+if a > b and a > c:
+    print(a, "is largest")
+elif b > a and b > c:
+    print(b, "is largest")
+else:
+    print(c, "is largest")
+
+
+
+# Q5. Check voting eligibility
+age = int(input("Enter age: "))
+
+if age >= 18:
+    print("Eligible for voting")
+else:
+    print("Not eligible")
+
+
+
+# Q6. Print multiplication table
+num = int(input("Enter number: "))
+
+for i in range(1,11):
+    print(num*i)
+
+
+
+# Q7. Find sum of numbers from 1 to N
+n = int(input("Enter N: "))
+
+total = 0
+
+for i in range(1,n+1):
+    total += i
+
+print("Sum:", total)
+
+
+
+# Q8. Find factorial
+n = int(input("Enter number: "))
+
+fact = 1
+
+for i in range(1,n+1):
+    fact *= i
+
+print("Factorial:", fact)
+
+
+
+# Q9. Reverse a number
+num = int(input("Enter number: "))
+
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse*10 + digit
+    num = num//10
+
+print("Reverse:", reverse)
+
+
+
+# Q10. Check palindrome number
+num = int(input("Enter number: "))
+
+original = num
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse*10 + digit
+    num = num//10
+
+if original == reverse:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+
+
+# Q11. Count digits
+num = int(input("Enter number: "))
+
+count = 0
+
+while num > 0:
+    count += 1
+    num //= 10
+
+print("Number of digits:", count)
+
+
+
+# Q12. Sum of digits
+num = int(input("Enter number: "))
+
+sum_digit = 0
+
+while num > 0:
+    sum_digit += num % 10
+    num //= 10
+
+print("Sum of digits:", sum_digit)
+
+
+
+# Q13. Print Fibonacci series
+n = int(input("Enter terms: "))
+
+a = 0
+b = 1
+
+for i in range(n):
+    print(a, end=" ")
+    a,b = b,a+b
+
+
+
+# Q14. Prime number checker
+num = int(input("Enter number: "))
+
+prime = True
+
+if num <= 1:
+    prime = False
+else:
+    for i in range(2,num):
+        if num%i == 0:
+            prime = False
+            break
+
+if prime:
+    print("Prime")
+else:
+    print("Not Prime")
+
+
+
+# Q15. Student Grade Calculator
+marks = int(input("Enter marks: "))
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 60:
+    print("Grade C")
+elif marks >= 40:
+    print("Grade D")
+else:
+    print("Fail")
+
+
+
+# Q16. Pattern Printing
+for i in range(1,6):
+    print("*"*i)
+
+
+
+# Q17. Even numbers between 1-100
+for i in range(1,101):
+    if i%2==0:
+        print(i)
+
+
+
+# Q18. Find largest digit in a number
+num = int(input("Enter number: "))
+
+largest = 0
+
+while num > 0:
+    digit = num%10
+    
+    if digit > largest:
+        largest = digit
+        
+    num//=10
+
+print("Largest digit:", largest)
+
+
+
+# Q19. Count vowels in string
+text = input("Enter string: ")
+
+count = 0
+
+for ch in text:
+    if ch.lower() in "aeiou":
+        count += 1
+
+print("Vowels:", count)
+
+
+
+# Q20. Simple calculator using conditions
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+operator = input("Enter operator (+,-,*,/): ")
+
+if operator == "+":
+    print(a+b)
+elif operator == "-":
+    print(a-b)
+elif operator == "*":
+    print(a*b)
+elif operator == "/":
+    print(a/b)
+else:
+    print("Invalid operator")
+
+
+
 # Multiply two numbers
 print("Multiplication:", Num1 * Num2)
 
